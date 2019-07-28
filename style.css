@@ -1,9 +1,15 @@
 * {
     box-sizing: border-box;
 }
+html {
+    position: fixed;
+}
 
 body {
     margin: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 
 .main-container {
