@@ -9,11 +9,13 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    /* disable scroll */
     position: fixed;
 }
 
 .main-container {
     width: 100vw;
+    /* Set height to viewport, fit to viewable area only if supported */
     min-height: 100vh;
     min-height: -webkit-fill-available;
     display: flex;
