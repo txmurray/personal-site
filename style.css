@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #2a3439;
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        font-size: 1.7em;
+    }
+}
