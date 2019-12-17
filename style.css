@@ -2,35 +2,46 @@
     box-sizing: border-box;
 }
 html {
-    position: fixed;
 }
 
 body {
     margin: 0;
-    height: 100%;
-    width: 100%;
-    /* disable scroll */
-    position: fixed;
+    background-color: #1A1327;
 }
 
 .main-container {
-    width: 100vw;
-    /* Set height to viewport, fit to viewable area only if supported */
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 .hero {
     font-family: 'Poppins', sans-serif;
-    font-size: 3em;
-    color: #2a3439;
+    font-size: 40px;
+    color: #F3DBDB;
 }
 
-@media screen and (max-width: 600px) {
-    .hero {
-        font-size: 1.7em;
-    }
+.red-text {
+    color: #E27676;
+}
+
+
+@keyframes 
+fade-it { 
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+.js-fade-in-verb {
+    animation-name: fade-it;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+.hero {
+    transform: translate(50px, 0);
+}
+
+.move {
+    display: inline-block;
+    transform: translate(0, 50px)
 }
