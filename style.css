@@ -22,26 +22,28 @@ body {
 
 .red-text {
     color: #E27676;
-}
-
-
-@keyframes 
-fade-it { 
-    0%   { opacity: 0 }
-    100% { opacity: 1 }
-}
-
-.js-fade-in-verb {
-    animation-name: fade-it;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-
-.hero {
-    transform: translate(50px, 0);
-}
-
-.move {
     display: inline-block;
-    transform: translate(0, 50px)
+}
+
+
+/* @keyframes 
+animte-text { 
+    0%   { opacity: 0;
+           transform: translate(0, 50px);
+         }
+    25% { opacity: 1;
+           transform: translate(0, 0);
+        }
+    50% { opacity: 1;
+        transform: translate(0, 0);
+        }  
+    100% { opacity: 0;
+        transform: translate(0, -50px);
+        }        
+} */
+
+.fade-in-text {
+    animation-name: animate text 1s forwards;
+    animation-duration: 1000;
+    animation-fill-mode: forwards;
 }

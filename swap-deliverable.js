@@ -27,13 +27,10 @@ const items = [
   
 const output = document.querySelector("#output");
   
-const display = s => output.innerText = s;
-
+const swapText = s => output.innerText = s;
 
 items.forEach(
-  
-  delayLoop(display, 2000)
-  
+    delayLoop(swapText, 2000)
 );
 
 
