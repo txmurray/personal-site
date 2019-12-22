@@ -6,6 +6,7 @@ const array = [
   "icons",
   "apps",
   "pitch decks",
+  "illustrations",
   "dashboards",
   "digital ads",
   "animations",

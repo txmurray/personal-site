@@ -2,45 +2,89 @@
     box-sizing: border-box;
 }
 html {
+    height: 100%;
 }
 
 body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     background-color: #f8f8ff;
+    font-family: 'Poppins', sans-serif;
 }
 
 .main-container {
-    padding: 30px;
-    max-width: 560px;
+    padding: 0 18px 30px 18px;
+    /* max-width: 320px; */
     margin: 0 auto;
 }
 
 .hero {
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
+    font-size: 7vw;
+    font-weight: 700;
     color: #171718;
+    margin: 0;
 }
 
-.red-text {
-    color: #7E57C2;
+.hero + .hero {
+    margin: .5em 0 0 0;
+}
+
+.social-links {
+    font-size: 3.25vw;
+    font-weight: 400;
+    list-style: none;
+    margin: 40px 0 0 0;
+    padding: 16px 0 0 0;
+    border-top: 1px solid rgba(87, 98, 194, 0.2);
+}
+
+.social-links li {
     display: inline-block;
 }
 
-@media screen and (min-width: 100px) {
-    .main-container {
-        max-width: 1200px;
-    }
+.social-links li + li {
+    margin-left: 12px;
+}
+
+.social-links a {
+    color: #171718;
+}
+
+.social-links a:hover {
+    color: #5762C2;
+    transition: 400ms;
+}
+
+.highlight {
+    color: #5762C2;
+}
+
+a {
+    color: #5762C2;
+    text-decoration: none;
 }
 
 #deliverable {
-  color: #7E57C2;
+  color: #5762C2;
   animation: slide 2s infinite;
   display: inline-block;
 }
 
+.period {
+    animation: slide 2s infinite;
+    display: inline-block;
+}
+
+.lg-view {
+    display: none;
+}
+
 @keyframes slide {
   0% {
-      transform: translateY(50px);
+      transform: translateY(40%);
       opacity: 0;
       animation-timing-function: 
       cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -56,7 +100,37 @@ body {
       cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   100% {
-      transform: translateY(-30px);
+      transform: translateY(-40%);
       opacity: 0;
   }
+}
+
+@media screen and (min-width: 500px) {
+    .hero {
+        font-size: 2.25em;
+    }
+    .social-links {
+        font-size: .875em;
+    }
+    .main-container {
+        max-width: 31.25em;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .hero {
+        font-size: 2.25em;
+    }
+    .social-links {
+        font-size: .875em;
+    }
+    .main-container {
+        max-width: 41.25em;
+    }
+    .sm-view {
+        display: none;
+    }
+    .lg-view {
+        display: inline;
+    }
 }
