@@ -2,35 +2,135 @@
     box-sizing: border-box;
 }
 html {
-    position: fixed;
+    height: 100%;
 }
 
 body {
-    margin: 0;
     height: 100%;
-    width: 100%;
-    /* disable scroll */
-    position: fixed;
-}
-
-.main-container {
-    width: 100vw;
-    /* Set height to viewport, fit to viewable area only if supported */
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    background-color: #f8f8ff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container {
+    padding: 0 18px 30px 18px;
+    /* max-width: 320px; */
+    margin: 0 auto;
 }
 
 .hero {
-    font-family: 'Poppins', sans-serif;
-    font-size: 3em;
-    color: #2a3439;
+    font-size: 7vw;
+    font-weight: 700;
+    color: #171718;
+    margin: 0;
 }
 
-@media screen and (max-width: 600px) {
+.hero + .hero {
+    margin: .5em 0 0 0;
+}
+
+.social-links {
+    font-size: 3.25vw;
+    font-weight: 400;
+    list-style: none;
+    margin: 40px 0 0 0;
+    padding: 16px 0 0 0;
+    border-top: 1px solid rgba(87, 98, 194, 0.2);
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links li + li {
+    margin-left: 12px;
+}
+
+.social-links a {
+    color: #171718;
+}
+
+.social-links a:hover {
+    color: #5762C2;
+    transition: 400ms;
+}
+
+.highlight {
+    color: #5762C2;
+}
+
+a {
+    color: #5762C2;
+    text-decoration: none;
+}
+
+#deliverable {
+  color: #5762C2;
+  animation: slide 2s infinite;
+  display: inline-block;
+}
+
+.period {
+    animation: slide 2s infinite;
+    display: inline-block;
+}
+
+.lg-view {
+    display: none;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateY(40%);
+      opacity: 0;
+      animation-timing-function: 
+      cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  66% {
+      transform: translateY(0);
+      opacity: 1;
+      animation-timing-function: 
+      cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  100% {
+      transform: translateY(-40%);
+      opacity: 0;
+  }
+}
+
+@media screen and (min-width: 500px) {
     .hero {
-        font-size: 1.7em;
+        font-size: 2.25em;
+    }
+    .social-links {
+        font-size: .875em;
+    }
+    .main-container {
+        max-width: 31.25em;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .hero {
+        font-size: 2.25em;
+    }
+    .social-links {
+        font-size: .875em;
+    }
+    .main-container {
+        max-width: 41.25em;
+    }
+    .sm-view {
+        display: none;
+    }
+    .lg-view {
+        display: inline;
     }
 }
