@@ -84,24 +84,29 @@ a {
 
 @keyframes slide {
   0% {
-      transform: translateY(40%);
-      opacity: 0;
-      animation-timing-function: 
-      cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateY(40%);
+    opacity: 0;
+    animation-timing-function: 
   }
-  25% {
+  5% {
+    transform: translateY(40%);
+    opacity: 0;
+    animation-timing-function: 
+    cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  30% {
     transform: translateY(0);
     opacity: 1;
   }
-  66% {
-      transform: translateY(0);
-      opacity: 1;
-      animation-timing-function: 
-      cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+    animation-timing-function: 
+    cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   100% {
-      transform: translateY(-40%);
-      opacity: 0;
+    transform: translateY(-40%);
+    opacity: 0;
   }
 }
 
