@@ -87,6 +87,7 @@ a {
     transform: translateY(40%);
     opacity: 0;
     animation-timing-function: 
+    cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   5% {
     transform: translateY(40%);
