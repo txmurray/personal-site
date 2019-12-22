@@ -6,7 +6,7 @@ html {
 
 body {
     margin: 0;
-    background-color: #1A1327;
+    background-color: #f8f8ff;
 }
 
 .main-container {
@@ -18,11 +18,11 @@ body {
 .hero {
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
-    color: #F3DBDB;
+    color: #171718;
 }
 
 .red-text {
-    color: #E27676;
+    color: #7E57C2;
     display: inline-block;
 }
 
@@ -32,38 +32,31 @@ body {
     }
 }
 
-.o-preloader__text--js-cycle {
-    color: #E27676;
-    display: inline-block;
-    animation-name: text-cycle;
-    animation-duration: 2500ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-  }
+#deliverable {
+  color: #7E57C2;
+  animation: slide 2s infinite;
+  display: inline-block;
+}
 
-  @keyframes text-cycle {
-    0% {
+@keyframes slide {
+  0% {
+      transform: translateY(50px);
       opacity: 0;
-      transform: translateY(-10px);
-    }
-    15% {
-      opacity: 1;
+      animation-timing-function: 
+      cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  66% {
       transform: translateY(0);
-    }
-    50% {
       opacity: 1;
-      transform: translateY(0);
-    }
-    85% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
+      animation-timing-function: 
+      cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  100% {
+      transform: translateY(-30px);
       opacity: 0;
-      transform: translateY(10px);
-    }
   }
-
-  .test-animation {
-    color: green;
-  }
+}
